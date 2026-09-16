@@ -140,3 +140,46 @@ a { color: var(--accent); }
 
 table.resume-table { width: 100%; border-collapse: collapse; margin: 16px 0; }
 table.resume-table td { padding: 4px 0; vertical-align: top; }
+
+.pill-group { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+
+.pill {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  color: var(--text);
+}
+
+.resume-header { margin-bottom: 8px; }
+.resume-header h1 { margin-bottom: 4px; }
+.resume-contact { color: var(--muted); font-size: 0.95rem; }
+
+.exp-card { margin-bottom: 20px; }
+.exp-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+}
+.exp-company { font-weight: 700; font-size: 1.05rem; }
+.exp-role { color: var(--muted); }
+.exp-dates { color: var(--muted); font-size: 0.85rem; white-space: nowrap; }
+.exp-location { color: var(--muted); font-size: 0.85rem; }
+.exp-summary { margin: 8px 0; }
+.exp-card ul { margin: 8px 0 0; padding-left: 20px; }
+.exp-card li { margin-bottom: 6px; }
+
+.section-title {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.8rem;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+  padding-top: 32px;
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+.section-title:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
