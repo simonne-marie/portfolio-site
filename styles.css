@@ -83,6 +83,10 @@ a { color: var(--accent); }
   flex-wrap: wrap;
 }
 
+@media (max-width: 480px) {
+  .site-header nav { gap: 10px 20px; }
+}
+
 .site-header nav a {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-size: 12px;
@@ -186,12 +190,12 @@ main { padding-bottom: 40px; }
 
 .reveal.is-visible { opacity: 1; transform: translateY(0); }
 
-section {
-  padding: 56px 0;
+section.wrap {
+  padding: 56px 24px;
   border-top: 1px solid var(--border);
 }
 
-section:first-of-type { border-top: none; }
+section.wrap:first-of-type { border-top: none; }
 
 /* Drop cap */
 .about p.lede:first-letter {
