@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Simonne Piriz — Marketing Technology & Operations Executive</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,7 +12,7 @@
   <div class="wrap">
     <a class="logo" href="index.html">Simonne Piriz</a>
     <nav>
-      <a href="index.html">Home</a>
+      <a href="index.html" class="current">Home</a>
       <a href="resume.html">Resume</a>
       <a href="projects.html">Work</a>
       <a href="blog/index.html">Blog</a>
@@ -22,25 +23,28 @@
 
 <main>
   <section class="hero wrap">
-    <h1>Hi, I'm Simonne Piriz.</h1>
+    <h1>Hi, I'm<br><em>Simonne.</em></h1>
     <p class="tagline">Marketing Technology &amp; Operations Executive — where marketing strategy meets technology execution.</p>
     <div class="cta">
-      <a class="btn" href="resume.html">View Resume</a>
-      <a class="btn btn-outline" href="projects.html">See Selected Work</a>
+      <a class="btn" href="resume.html">
+        View Resume
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="btn-outline" href="projects.html">See Selected Work</a>
     </div>
   </section>
 
-  <section class="about wrap">
-    <h2>About</h2>
-    <p>
+  <section class="about wrap reveal">
+    <div class="label" style="color: var(--accent); margin-bottom: 22px;">About</div>
+    <p class="lede">
       I'm a Marketing Technology leader with 10+ years of experience architecting
-      scalable MarTech ecosystems across healthcare and SaaS organizations. I
-      specialize in CRM architecture, marketing automation, systems integration,
-      and data governance — connecting marketing activity to measurable revenue
-      outcomes. I partner cross-functionally with RevOps, Sales, and Product to
-      build the technology, data, and processes that let teams move faster with
-      confidence.
+      scalable MarTech ecosystems across healthcare and SaaS. I specialize in CRM
+      architecture, marketing automation, systems integration, and data governance —
+      connecting marketing activity to measurable revenue outcomes. I partner
+      cross-functionally with RevOps, Sales, and Product to build the technology,
+      data, and processes that let teams move faster with confidence.
     </p>
+    <div class="label" style="color: var(--muted); margin: 40px 0 16px;">What I Bring</div>
     <div class="pill-group">
       <span class="pill">MarTech Strategy</span>
       <span class="pill">CRM Architecture</span>
@@ -54,13 +58,14 @@
     </div>
   </section>
 
-  <section class="contact wrap" id="contact">
-    <h2>Get in touch</h2>
-    <p>
-      Orlando, FL<br>
-      Email: <a href="mailto:simonnemv@gmail.com">simonnemv@gmail.com</a><br>
-      Phone: <a href="tel:+18133739868">(813) 373-9868</a><br>
-      LinkedIn: <a href="https://www.linkedin.com/in/simonnepiriz/" target="_blank" rel="noopener">linkedin.com/in/simonnepiriz</a>
+  <section class="contact wrap reveal" id="contact">
+    <div class="label" style="color: var(--accent); margin-bottom: 14px;">Get in Touch</div>
+    <h2 style="font-style: italic;">Let's talk.</h2>
+    <p class="sans" style="font-size: 0.95rem; display: flex; flex-direction: column; gap: 10px; color: var(--text);">
+      <span>Orlando, FL</span>
+      <span><a href="mailto:simonnemv@gmail.com">simonnemv@gmail.com</a></span>
+      <span><a href="tel:+18133739868">(813) 373-9868</a></span>
+      <span><a href="https://www.linkedin.com/in/simonnepiriz/" target="_blank" rel="noopener">linkedin.com/in/simonnepiriz</a></span>
     </p>
   </section>
 </main>
@@ -68,5 +73,6 @@
 <footer class="wrap">
   <p>&copy; 2026 Simonne Piriz. Built with Cloudflare Pages.</p>
 </footer>
+<script src="scripts.js"></script>
 </body>
 </html>

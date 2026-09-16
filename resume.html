@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Resume — Simonne Piriz</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,7 +13,7 @@
     <a class="logo" href="index.html">Simonne Piriz</a>
     <nav>
       <a href="index.html">Home</a>
-      <a href="resume.html">Resume</a>
+      <a href="resume.html" class="current">Resume</a>
       <a href="projects.html">Work</a>
       <a href="blog/index.html">Blog</a>
       <a href="index.html#contact">Contact</a>
@@ -21,11 +22,14 @@
 </header>
 
 <main class="wrap">
-  <div class="resume-header">
+  <div class="resume-header reveal">
     <h1>Simonne Piriz</h1>
-    <p class="resume-contact">Orlando, FL &nbsp;|&nbsp; (813) 373-9868 &nbsp;|&nbsp; <a href="mailto:simonnemv@gmail.com">simonnemv@gmail.com</a> &nbsp;|&nbsp; <a href="https://www.linkedin.com/in/simonnepiriz/" target="_blank" rel="noopener">linkedin.com/in/simonnepiriz</a></p>
+    <p class="resume-contact">Orlando, FL &nbsp;&middot;&nbsp; (813) 373-9868 &nbsp;&middot;&nbsp; <a href="mailto:simonnemv@gmail.com">simonnemv@gmail.com</a> &nbsp;&middot;&nbsp; <a href="https://www.linkedin.com/in/simonnepiriz/" target="_blank" rel="noopener">linkedin.com/in/simonnepiriz</a></p>
   </div>
-  <a class="btn" href="assets/simonne-piriz-resume.pdf" target="_blank" rel="noopener">Download PDF</a>
+  <a class="btn-outline" href="assets/simonne-piriz-resume.pdf" target="_blank" rel="noopener">
+    Download PDF
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0l-5-5m5 5l5-5M4 21h16"/></svg>
+  </a>
 
   <div class="section-title">Summary</div>
   <p>
@@ -64,16 +68,16 @@
 
   <div class="section-title">Experience</div>
 
-  <div class="exp-card card">
+  <div class="exp-card reveal">
     <div class="exp-top">
-      <span class="exp-company">Vendgogh (Vendbay LLC)</span>
+      <span class="exp-company">VendGogh (Vendbay LLC)</span>
       <span class="exp-dates">April 2022 – Present</span>
     </div>
     <div class="exp-top">
       <span class="exp-role">Partner, Marketing Lead</span>
       <span class="exp-location">US / Remote · Part-time</span>
     </div>
-    <p class="exp-summary">As the first marketer to join Vendgogh, architected the company's marketing strategy and built the marketing function from the ground up — partnering on a trailblazing approach to vending technology across marketing operations, data governance, and go-to-market execution.</p>
+    <p class="exp-summary">As the first marketer to join VendGogh, architected the company's marketing strategy and built the marketing function from the ground up — partnering on a trailblazing approach to vending technology across marketing operations, data governance, and go-to-market execution.</p>
     <ul>
       <li>Architected and managed the full MarTech stack, selecting and integrating tools across CRM, email automation, social publishing, analytics, and content operations to support scalable acquisition and retention.</li>
       <li>Designed and enforced data governance standards across marketing systems, ensuring clean data flow, consistent contact records, and reliable attribution from lead capture through conversion.</li>
@@ -83,7 +87,7 @@
     </ul>
   </div>
 
-  <div class="exp-card card">
+  <div class="exp-card reveal">
     <div class="exp-top">
       <span class="exp-company">HealthSnap</span>
       <span class="exp-dates">December 2024 – January 2026</span>
@@ -102,7 +106,7 @@
     </ul>
   </div>
 
-  <div class="exp-card card">
+  <div class="exp-card reveal">
     <div class="exp-top">
       <span class="exp-company">PrimaSun (acquired by ResMed)</span>
       <span class="exp-dates">June 2023 – November 2023</span>
@@ -120,7 +124,7 @@
     </ul>
   </div>
 
-  <div class="exp-card card">
+  <div class="exp-card reveal">
     <div class="exp-top">
       <span class="exp-company">Harness Giving (Harness Technologies LLC)</span>
       <span class="exp-dates">October 2021 – June 2023</span>
@@ -139,7 +143,7 @@
     </ul>
   </div>
 
-  <div class="exp-card card">
+  <div class="exp-card reveal">
     <div class="exp-top">
       <span class="exp-company">Bonum Health (formerly owned by Trxade)</span>
       <span class="exp-dates">February 2019 – October 2021</span>
@@ -156,7 +160,7 @@
     </ul>
   </div>
 
-  <div class="exp-card card">
+  <div class="exp-card reveal">
     <div class="exp-top">
       <span class="exp-company">Atlassian (formerly Opsgenie)</span>
       <span class="exp-dates">June 2018 – January 2019</span>
@@ -181,7 +185,7 @@
   </p>
 
   <div class="section-title">Education</div>
-  <p>
+  <p style="margin-bottom: 60px;">
     BA in Psychology &amp; Minor in Communications — University of South Florida,
     College of Arts and Sciences, 2012<br>
     <span class="exp-location">Activities and societies: Alpha Kappa Psi, ENLACE, N.I.T.E. Walk, Psychology Majors</span>
@@ -191,5 +195,6 @@
 <footer class="wrap">
   <p>&copy; 2026 Simonne Piriz. Built with Cloudflare Pages.</p>
 </footer>
+<script src="scripts.js"></script>
 </body>
 </html>
