@@ -262,6 +262,56 @@ h2 {
 article.post h1 { margin-bottom: 6px; }
 article.post .post-meta { margin-bottom: 24px; display: block; }
 
+/* Social icons */
+.social-icons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  color: var(--accent);
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.social-icons a:hover {
+  background: var(--accent);
+  color: var(--bg);
+  transform: translateY(-2px);
+}
+
+.social-icons-inline {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.social-icons-inline a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  color: var(--accent);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.social-icons-inline a:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+
 /* Resume */
 .resume-header h1 {
   font-family: "Newsreader", Georgia, serif;
