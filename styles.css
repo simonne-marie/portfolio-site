@@ -387,6 +387,18 @@ article.post .post-meta { margin-bottom: 24px; display: block; }
 
 .work-entry h2 { font-size: 1.35rem; margin: 4px 0 10px; }
 .work-entry .exp-location { color: var(--accent); margin-bottom: 4px; display: block; }
+.work-link {
+  display: inline-block;
+  margin-top: 4px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+}
+.work-link span { display: inline-block; transition: transform 0.2s; }
+.work-link:hover span { transform: translateX(3px); }
 
 footer {
   border-top: 1px solid var(--border);
