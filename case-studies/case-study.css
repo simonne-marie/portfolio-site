@@ -311,6 +311,85 @@ dialog.lightbox img { display: block; width: 100%; height: auto; }
   cursor: pointer;
 }
 
+/* Shared extras used by the Harness case study */
+.cs-intro { margin: 0 0 18px; }
+
+.shots {
+  display: grid;
+  grid-template-columns: repeat(var(--n, 2), minmax(0, 1fr));
+  gap: 16px;
+  margin: 20px 0 6px;
+}
+.shots .zoom img { aspect-ratio: var(--ar, 16 / 9); object-fit: cover; object-position: top; }
+
+.rows { list-style: none; margin: 18px 0 0; padding: 0; }
+.rows li {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 11px 0;
+  border-top: 1px solid var(--border);
+  font-size: 0.95rem;
+}
+.rows li:last-child { border-bottom: 1px solid var(--border); }
+.rows li > span:first-child { min-width: 0; }
+.rows .when {
+  align-self: center;
+  white-space: nowrap;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+.rows .when.me { color: var(--accent); font-weight: 600; }
+
+.cs-points { list-style: none; margin: 0 0 26px; padding: 0; display: grid; gap: 10px; }
+.cs-points li { position: relative; padding-left: 20px; font-size: 0.98rem; }
+.cs-points li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 0.62em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+/* Before and after tool stack (inline SVG) */
+.tools-compare { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 28px; }
+.tools-panel { min-width: 0; }
+.tools-panel svg { display: block; width: 100%; height: auto; }
+.tools-panel .flow-label { margin: 0 0 8px; }
+.tools-cap {
+  margin: 10px 0 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+.tools-compare text {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 11px;
+  fill: var(--text);
+}
+.tools-compare text.t-strong { font-weight: 700; font-size: 12px; }
+.t-before rect { fill: none; stroke: var(--muted); stroke-width: 1.5; stroke-dasharray: 5 4; }
+.t-before text { fill: var(--muted); }
+.t-after-node rect { fill: var(--bg); stroke: var(--accent); stroke-width: 2; }
+.t-hub rect { fill: var(--accent); stroke: var(--accent); stroke-width: 2; }
+.t-hub text { fill: var(--btn-text); }
+.t-after-node, .t-hub { opacity: 0; transition: opacity 0.5s ease; }
+.t-line {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset 0.7s ease;
+  transition-delay: var(--d, 0s);
+}
+.flow-wrap.is-visible .t-line { stroke-dashoffset: 0; }
+.flow-wrap.is-visible .t-after-node, .flow-wrap.is-visible .t-hub { opacity: 1; }
+
 .cs-also {
   margin: 8px 0 0;
   padding-top: 24px;
@@ -376,6 +455,8 @@ dialog.lightbox img { display: block; width: 100%; height: auto; }
 @media (max-width: 640px) {
   .gaps { grid-template-columns: 1fr; }
   .ba { grid-template-columns: 1fr; gap: 22px; }
+  .shots { grid-template-columns: 1fr; }
+  .tools-compare { grid-template-columns: 1fr; gap: 26px; }
   .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px 18px; }
 
   ol.flow { grid-template-columns: 1fr; }
@@ -404,4 +485,6 @@ dialog.lightbox img { display: block; width: 100%; height: auto; }
 @media (prefers-reduced-motion: reduce) {
   .cs .reveal { opacity: 1; transform: none; transition: none; }
   ol.flow li, ol.flow li::after { opacity: 1; transform: none !important; transition: none; }
+  .t-line { stroke-dashoffset: 0; transition: none; }
+  .t-after-node, .t-hub { opacity: 1; transition: none; }
 }
