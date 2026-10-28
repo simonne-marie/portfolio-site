@@ -1,0 +1,31 @@
+# robots.txt for simonnemarie.com
+# Unlisted pages are kept out of search with a noindex tag on the page itself,
+# so they're intentionally not named here.
+
+# Search engines and AI search assistants: welcome
+User-agent: *
+Disallow:
+
+# AI training crawlers: not allowed
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: anthropic-ai
+User-agent: CCBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: Bytespider
+User-agent: Meta-ExternalAgent
+User-agent: cohere-ai
+Disallow: /
+
+# SEO crawlers: not allowed
+User-agent: AhrefsBot
+User-agent: AhrefsSiteAudit
+User-agent: SemrushBot
+User-agent: MJ12bot
+User-agent: DotBot
+User-agent: BLEXBot
+User-agent: DataForSeoBot
+Disallow: /
+
+Sitemap: https://simonnemarie.com/sitemap.xml
