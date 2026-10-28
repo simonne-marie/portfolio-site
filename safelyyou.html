@@ -12,8 +12,9 @@
 <link rel="stylesheet" href="styles.css">
 <style>
   /* Layout: a 780px reading column, with the plan grid and chart allowed to run wider. Colors come from the site tokens. */
-  :root { --mark-hi: #ba4e25; --mark-lo: #928b85; --grid: oklch(88% 0.02 70); }
-  @media (prefers-color-scheme: dark) { :root { --mark-hi: #d8714c; --mark-lo: #807973; --grid: oklch(32% 0.02 50); } }
+  /* Neutral surfaces for this page only: the site's cream background is swapped for a near-white with a faint bias toward the accent */
+  :root { --bg: oklch(98.6% 0.003 40); --card-bg: oklch(96.2% 0.004 40); --border: oklch(90.5% 0.005 40); --mark-hi: #ba4e25; --mark-lo: #928b85; --grid: oklch(90.5% 0.005 40); }
+  @media (prefers-color-scheme: dark) { :root { --bg: oklch(17.5% 0.004 40); --card-bg: oklch(23% 0.005 40); --border: oklch(31% 0.006 40); --mark-hi: #d8714c; --mark-lo: #807973; --grid: oklch(31% 0.006 40); } }
 
   .sy-sans, .sy-eyebrow, .sy-note, .sy-table, .sy-chip, .plan, .chart, .flow, .idea .from, .built, .sy-list li, .sy-sources {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
@@ -152,9 +153,9 @@
 
 <main>
   <div class="wrap sy-hero">
-    <p class="sy-eyebrow">Growth plan · Prepared by Simonne Piriz</p>
+    <p class="sy-eyebrow">Unlisted · Growth plan prepared by Simonne Piriz</p>
     <h1>Growing SafelyYou</h1>
-    <p class="sub">My first 90 days and first year</p>
+    <p class="sub">How I'd approach the first 90 days and first year</p>
     <p class="lede">A starting point built from public research: SafelyYou's live Google ads, search demand, site traffic estimates, and published outcomes. I'd validate every piece with the team in the first 30 days.</p>
     <ul class="sy-summary">
       <li><b>Where growth comes from</b>Most growth will come from ABM, current customers, and Halo. Search demand is small, so paid search focuses on buyers who are already looking.</li>
