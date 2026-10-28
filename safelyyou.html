@@ -16,7 +16,7 @@
   :root { --bg: oklch(98.6% 0.003 40); --card-bg: oklch(96.2% 0.004 40); --border: oklch(90.5% 0.005 40); --mark-hi: #ba4e25; --mark-lo: #928b85; --grid: oklch(90.5% 0.005 40); }
   @media (prefers-color-scheme: dark) { :root { --bg: oklch(17.5% 0.004 40); --card-bg: oklch(23% 0.005 40); --border: oklch(31% 0.006 40); --mark-hi: #d8714c; --mark-lo: #807973; --grid: oklch(31% 0.006 40); } }
 
-  .sy-sans, .sy-eyebrow, .sy-note, .sy-table, .sy-chip, .plan, .chart, .flow, .idea .from, .built, .sy-list li, .sy-sources {
+  .sy-sans, .sy-eyebrow, .sy-note, .sy-table, .sy-chip, .plan, .chart, .idea .from, .built, .sy-list li, .sy-sources {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   }
   .wide { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
@@ -84,16 +84,6 @@
     .crow.axisrow .kw { display: none; }
   }
 
-  /* Create, capture, convert, expand */
-  .flow { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin: 18px 0 8px; }
-  .flow > div { border: 1px solid var(--border); border-radius: 10px; padding: 16px; background: var(--bg); display: flex; flex-direction: column; gap: 8px; min-width: 0; }
-  .flow .stage { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
-  .flow h3 { font-size: 1.05rem; margin: 0; }
-  .flow ul { margin: 0; padding-left: 1.1em; font-size: 0.84rem; line-height: 1.5; display: flex; flex-direction: column; gap: 3px; }
-  .flow .ads { margin-top: auto; font-size: 0.8rem; padding: 8px 10px; border-radius: 8px; background: var(--card-bg); }
-  .flow .ads b { color: var(--accent); }
-  @media (max-width: 820px) { .flow { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-  @media (max-width: 480px) { .flow { grid-template-columns: minmax(0, 1fr); } }
 
   /* Signature ideas */
   .ideas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 18px; }
@@ -167,11 +157,8 @@
   <nav class="sy-toc" aria-label="On this page">
     <div class="wide sy-toc-inner">
       <a href="#plan">The plan</a>
-      <a href="#search">Search demand</a>
-      <a href="#flow">How it fits</a>
       <a href="#ideas">Signature ideas</a>
-      <a href="#paid">Ads today</a>
-      <a href="#plays">Supporting plays</a>
+      <a href="#search">Search and ads</a>
       <a href="#measure">Reporting</a>
     </div>
   </nav>
@@ -232,8 +219,25 @@
     <p class="sy-note" style="margin-top:4px">*Falls Index: an idea to explore. A quarterly benchmark of fall trends by state and care type, built from SafelyYou's research and de-identified outcomes data, pending a data and privacy review.</p>
   </section>
 
+  <div class="wrap">
+    <section class="sy-section" id="ideas">
+      <p class="sy-eyebrow">Signature ideas</p>
+      <h2>Four ideas I'd bring to the plan</h2>
+      <p>Each idea uses something SafelyYou already has: its outcomes data, its customers, its research, or Halo.</p>
+      <div class="ideas sy-sans">
+        <div class="idea"><span class="num">1</span><h3>A one-page plan for every target operator</h3><p>Clay could be used to pull each operator's public details, like community count, regions, and recent news. A one-pager would then be drafted on what SafelyYou could mean for that operator, using SafelyYou's published outcomes, and reviewed before it goes out. It would feed outreach, direct mail, and sales meetings.</p><p class="from"><b>From my experience:</b> at <a href="case-studies/healthsnap.html">HealthSnap</a> I ran ZoomInfo enrichment with an always-on workflow that moved contacts into campaigns once they met set criteria. At VendGogh, Claude drafts and I approve before anything goes out.</p></div>
+        <div class="idea"><span class="num">2</span><h3>Results reports for current customers</h3><p>Each customer's regional leaders would see their own outcomes at the communities already using SafelyYou: falls, ER visits, and length of stay. The report would then make the case for the communities that aren't on SafelyYou yet. SafelyYou's expansion announcements show this is already how growth happens, and the reports would make it a repeatable program.</p><p class="from"><b>From my experience:</b> at HealthSnap I built reporting from scratch, including revenue by source and a lead-to-opportunity funnel. At <a href="case-studies/harness.html">Harness Giving</a>, feature launch programs raised customer operations satisfaction 11%.</p></div>
+        <div class="idea"><span class="num">3</span><h3>A quarterly Falls Index*</h3><p class="sy-note">An idea to explore</p><p>The Cost of Senior Care research and de-identified data from more than 1,000 communities could become a regular benchmark by state and care type. Trade media covers data, sales would get a reason to reach out every quarter, and each edition would add content that organic search can find.</p><p class="from"><b>From my experience:</b> at Bonum Health I ran PR and trade media, writing releases, pitching industry outlets, and managing publications like Drug Store News.</p></div>
+        <div class="idea"><span class="num">4</span><h3>Halo for new buildings</h3><p>Every new or renovated community needs an eCall system. Reaching developers and architects through the construction pipeline in trade press and industry data could get Halo specified before a building opens.</p><p class="from"><b>From my experience:</b> at PrimaSun I led go-to-market for two consumer health apps from pre-launch through initial growth. At VendGogh I mapped a niche industry's trade press and associations to reach buyers where they already look.</p></div>
+      </div>
+      <p class="sy-note" style="margin-top:16px;font-size:0.92rem"><b>Also worth exploring:</b> a family opt-in kit for communities, co-marketing with partners like Yardi and NOTIFY, and LinkedIn Thought Leader Ads from customer executives.</p>
+    </section>
+
+  </div>
+
   <section class="wide sy-section" id="search">
-    <p class="sy-eyebrow">Why the plan looks like this</p>
+    <p class="sy-eyebrow">Search and ads</p>
+    <h2>Where buyers search</h2>
     <figure class="chart sy-sans">
       <h3>Bid on the few buyer searches, and block the consumer ones.</h3>
       <p class="sy-note" style="margin:0">Search demand for this category is small. Average monthly Google searches in the US, October 2025 to September 2026, from Google Keyword Planner. Google reports ranges, shown here as bars on a log scale.</p>
@@ -283,36 +287,8 @@
   </section>
 
   <div class="wrap">
-    <section class="sy-section" id="flow">
-      <p class="sy-eyebrow">How the pieces work together</p>
-      <h2>Create demand, capture it, convert it, expand it</h2>
-      <p>Paid search does its best work in the middle. When ABM, PR, and events are working, more operators search for SafelyYou by name, and the brand campaign catches them. That brand search trend becomes a simple monthly signal that awareness is growing.</p>
-    </section>
-  </div>
-  <div class="wide">
-    <div class="flow sy-sans">
-      <div><span class="stage">Create</span><h3>Reach the right operators</h3><ul><li>ABM to Tier 1 accounts</li><li>Customer expansion programs</li><li>Halo launch</li><li>PR and the Falls Index*</li><li>Industry events and dinners</li><li>Partners</li></ul><p class="ads"><b>Google Ads:</b> a small role, since buyers rarely search</p></div>
-      <div><span class="stage">Capture</span><h3>Be there when they look</h3><ul><li>Brand search</li><li>Competitor search</li><li>High-intent search</li><li>Organic content</li></ul><p class="ads"><b>Google Ads:</b> the main job, focused on brand, competitor, and high-intent searches</p></div>
-      <div><span class="stage">Convert</span><h3>Turn visits into meetings</h3><ul><li>Proof for each buyer</li><li>Meeting booking after the demo form</li><li>ROI calculator</li><li>Fast follow-up</li></ul><p class="ads"><b>Google Ads:</b> retargeting Tier 1 visitors with proof and a demo offer</p></div>
-      <div><span class="stage">Expand</span><h3>Grow within customers</h3><ul><li>Results reports</li><li>Halo and Wellness upgrades</li><li>Advisory group</li><li>Family opt-in kit</li></ul><p class="ads"><b>Google Ads:</b> customer list targeting, where the account qualifies</p></div>
-    </div>
-  </div>
-
-  <div class="wrap">
-    <section class="sy-section" id="ideas">
-      <p class="sy-eyebrow">Signature ideas</p>
-      <h2>Four ideas I'd bring to the plan</h2>
-      <p>Each idea uses something SafelyYou already has: its outcomes data, its customers, its research, or Halo.</p>
-      <div class="ideas sy-sans">
-        <div class="idea"><span class="num">1</span><h3>A one-page plan for every target operator</h3><p>Clay could be used to pull each operator's public details, like community count, regions, and recent news. A one-pager would then be drafted on what SafelyYou could mean for that operator, using SafelyYou's published outcomes, and reviewed before it goes out. It would feed outreach, direct mail, and sales meetings.</p><p class="from"><b>From my experience:</b> at <a href="case-studies/healthsnap.html">HealthSnap</a> I ran ZoomInfo enrichment with an always-on workflow that moved contacts into campaigns once they met set criteria. At VendGogh, Claude drafts and I approve before anything goes out.</p></div>
-        <div class="idea"><span class="num">2</span><h3>Results reports for current customers</h3><p>Each customer's regional leaders would see their own outcomes at the communities already using SafelyYou: falls, ER visits, and length of stay. The report would then make the case for the communities that aren't on SafelyYou yet. SafelyYou's expansion announcements show this is already how growth happens, and the reports would make it a repeatable program.</p><p class="from"><b>From my experience:</b> at HealthSnap I built reporting from scratch, including revenue by source and a lead-to-opportunity funnel. At <a href="case-studies/harness.html">Harness Giving</a>, feature launch programs raised customer operations satisfaction 11%.</p></div>
-        <div class="idea"><span class="num">3</span><h3>A quarterly Falls Index*</h3><p class="sy-note">An idea to explore</p><p>The Cost of Senior Care research and de-identified data from more than 1,000 communities could become a regular benchmark by state and care type. Trade media covers data, sales would get a reason to reach out every quarter, and each edition would add content that organic search can find.</p><p class="from"><b>From my experience:</b> at Bonum Health I ran PR and trade media, writing releases, pitching industry outlets, and managing publications like Drug Store News.</p></div>
-        <div class="idea"><span class="num">4</span><h3>Halo for new buildings</h3><p>Every new or renovated community needs an eCall system. Reaching developers and architects through the construction pipeline in trade press and industry data could get Halo specified before a building opens.</p><p class="from"><b>From my experience:</b> at PrimaSun I led go-to-market for two consumer health apps from pre-launch through initial growth. At VendGogh I mapped a niche industry's trade press and associations to reach buyers where they already look.</p></div>
-      </div>
-    </section>
-
     <section class="sy-section" id="paid">
-      <p class="sy-eyebrow">Paid search today</p>
+      <p class="sy-eyebrow">Ads today</p>
       <h2>What's running, and how I'd tune it</h2>
       <p><a href="https://adstransparency.google.com/?region=US&amp;domain=safely-you.com">Google's Ads Transparency Center</a> shows 12 live SafelyYou ads in the US, 6 search and 6 display, last shown October 25 and 26, 2026. Search covers the brand, a competitor campaign, AI fall detection, clinical review, and fall prevention. Display leads with NOI, length of stay, turnover, and the fall prevention data.</p>
       <div class="shots">
@@ -340,19 +316,6 @@
         </table>
       </div>
       <p class="exp sy-sans"><b>From my experience:</b> I've run Google Ads for nationwide clinical trial recruitment at ClinEdge, telemedicine at Bonum Health, and nonprofit SaaS at Harness Giving, and I planned paid media across Google Search, YouTube, Meta, and Reddit at PrimaSun.</p>
-    </section>
-
-    <section class="sy-section" id="plays">
-      <p class="sy-eyebrow">Supporting plays</p>
-      <h2>More ways to reach and convert operators</h2>
-      <ul class="sy-list">
-        <li><b>Outreach triggered by events:</b> contact operators when they open or acquire communities or hire new leaders, using trade press and enrichment signals.</li>
-        <li><b>Direct mail to Tier 1 executives:</b> a printed research brief with their region's benchmarks and a link to the ROI calculator.</li>
-        <li><b>A family opt-in kit for communities:</b> letters, an FAQ, and a short video. More opted-in residents means more people protected and stronger results, which supports expansion. This is customer marketing, with no ad spend on families.</li>
-        <li><b>Partner co-marketing:</b> joint webinars and content with integration partners like Yardi and NOTIFY, and conversations with senior living insurers, since falls drive liability claims.</li>
-        <li><b>Website conversion:</b> an ROI calculator, consistent button wording, proof for each buyer, and pages comparing SafelyYou with rounds and alarms.</li>
-        <li><b>LinkedIn Thought Leader Ads:</b> with permission, promote posts from customer executives to target accounts, since operators trust other operators.</li>
-      </ul>
     </section>
 
     <section class="sy-section" id="measure">
