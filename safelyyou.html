@@ -94,6 +94,29 @@
   .idea .from b { color: var(--text); font-weight: 600; }
   @media (max-width: 640px) { .ideas { grid-template-columns: minmax(0, 1fr); } }
 
+  /* Impact and effort ratings */
+  .ie { display: flex; flex-wrap: wrap; gap: 8px; margin: 2px 0 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 0.78rem; color: var(--muted); }
+  .idea .ie { margin-top: auto; }
+  .idea .ie + .from { margin-top: 0; }
+  .more-grid .ie { margin-top: 10px; }
+  .ie-chip { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border: 1px solid var(--border); border-radius: 999px; background: var(--bg); }
+  .ie-chip b { color: var(--text); font-weight: 600; }
+  .dots { display: inline-flex; gap: 3px; }
+  .dots i { width: 7px; height: 7px; border-radius: 50%; border: 1px solid var(--accent); }
+  .dots i.on { background: var(--accent); }
+
+  /* More ideas accordion */
+  .more-ideas { margin-top: 18px; border: 1px solid var(--border); border-radius: 10px; background: var(--card-bg); }
+  .more-ideas summary { cursor: pointer; padding: 14px 18px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-weight: 600; font-size: 0.95rem; color: var(--text); }
+  .more-ideas summary span { display: inline-block; margin-left: 6px; padding: 1px 8px; border-radius: 999px; font-size: 0.75rem; background: var(--bg); color: var(--accent); border: 1px solid var(--border); }
+  .more-ideas summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .more-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 22px; padding: 4px 18px 18px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+  .more-grid b { font-size: 0.92rem; }
+  .more-grid p { margin: 4px 0 0; font-size: 0.86rem; line-height: 1.5; color: var(--text); }
+  .more-grid p.more-from { color: var(--muted); font-size: 0.82rem; border-top: 1px solid var(--border); padding-top: 8px; margin-top: 10px; }
+  .more-grid p.more-from b { color: var(--text); font-size: 0.82rem; }
+  @media (max-width: 640px) { .more-grid { grid-template-columns: minmax(0, 1fr); } }
+
   /* Lists, tables, shots */
   .sy-list { margin: 12px 0 0; padding-left: 1.2em; display: flex; flex-direction: column; gap: 8px; max-width: 42rem; }
   .sy-list li { font-size: 0.95rem; line-height: 1.55; }
@@ -191,7 +214,7 @@
           <tr>
             <th scope="row"><b>Launch Halo to new buyers</b><span>Watch: Halo pipeline from operations and finance</span></th>
             <td>Messaging for operations and finance, built with product and sales</td>
-            <td>An eCall replacement guide and an ROI calculator</td>
+            <td>An eCall replacement guide and a Halo view of the ROI model</td>
             <td>A webinar with an early Halo customer</td>
             <td>Halo for new buildings: developer and architect outreach</td>
             <td>Halo case studies for each buyer</td>
@@ -223,14 +246,21 @@
     <section class="sy-section" id="ideas">
       <p class="sy-eyebrow">Signature ideas</p>
       <h2>Four ideas I'd bring to the plan</h2>
-      <p>Each idea uses something SafelyYou already has: its outcomes data, its customers, its research, or Halo.</p>
+      <p>Each idea builds on something SafelyYou already has: its outcomes data, its customers, its research, or Halo. I checked them against SafelyYou's public site and press as of October 28, 2026. Internal programs may already cover some of this, and I'd confirm that first.</p>
+      <p class="sy-note" style="margin-top:6px">Impact and effort ratings are my early estimates, to confirm with the team.</p>
       <div class="ideas sy-sans">
-        <div class="idea"><span class="num">1</span><h3>A one-page plan for every target operator</h3><p>Clay could be used to pull each operator's public details, like community count, regions, and recent news. A one-pager would then be drafted on what SafelyYou could mean for that operator, using SafelyYou's published outcomes, and reviewed before it goes out. It would feed outreach, direct mail, and sales meetings.</p><p class="from"><b>From my experience:</b> at <a href="case-studies/healthsnap.html">HealthSnap</a> I ran ZoomInfo enrichment with an always-on workflow that moved contacts into campaigns once they met set criteria. At VendGogh, Claude drafts and I approve before anything goes out.</p></div>
-        <div class="idea"><span class="num">2</span><h3>Results reports for current customers</h3><p>Each customer's regional leaders would see their own outcomes at the communities already using SafelyYou: falls, ER visits, and length of stay. The report would then make the case for the communities that aren't on SafelyYou yet. SafelyYou's expansion announcements show this is already how growth happens, and the reports would make it a repeatable program.</p><p class="from"><b>From my experience:</b> at HealthSnap I built reporting from scratch, including revenue by source and a lead-to-opportunity funnel. At <a href="case-studies/harness.html">Harness Giving</a>, feature launch programs raised customer operations satisfaction 11%.</p></div>
-        <div class="idea"><span class="num">3</span><h3>A quarterly Falls Index*</h3><p class="sy-note">An idea to explore</p><p>The Cost of Senior Care research and de-identified data from more than 1,000 communities could become a regular benchmark by state and care type. Trade media covers data, sales would get a reason to reach out every quarter, and each edition would add content that organic search can find.</p><p class="from"><b>From my experience:</b> at Bonum Health I ran PR and trade media, writing releases, pitching industry outlets, and managing publications like Drug Store News.</p></div>
-        <div class="idea"><span class="num">4</span><h3>Halo for new buildings</h3><p>Every new or renovated community needs an eCall system. Reaching developers and architects through the construction pipeline in trade press and industry data could get Halo specified before a building opens.</p><p class="from"><b>From my experience:</b> at PrimaSun I led go-to-market for two consumer health apps from pre-launch through initial growth. At VendGogh I mapped a niche industry's trade press and associations to reach buyers where they already look.</p></div>
+        <div class="idea"><span class="num">1</span><h3>A one-page plan for every target operator</h3><p>Clay could be used to pull each operator's public details, like community count, regions, and recent news. A one-pager would then be drafted on what SafelyYou could mean for that operator, built on SafelyYou's ROI model and published outcomes, and reviewed before it goes out. It would feed outreach, direct mail, and sales meetings.</p><p class="ie"><span class="ie-chip" aria-label="Impact: high">Impact <span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span> <b>High</b></span><span class="ie-chip" aria-label="Effort: medium">Effort <span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></span> <b>Medium</b></span></p><p class="from"><b>From my experience:</b> at <a href="case-studies/healthsnap.html">HealthSnap</a> I ran ZoomInfo enrichment with an always-on workflow that moved contacts into campaigns once they met set criteria. At VendGogh, Claude drafts and I approve before anything goes out.</p></div>
+        <div class="idea"><span class="num">2</span><h3>An expansion report: covered vs. not yet covered</h3><p>SafelyYou's analytics give customers their outcomes. This would package them for regional and executive leaders and, with the operator's permission, compare communities using SafelyYou with the ones that aren't yet: falls, ER visits, and length of stay. Seeing the gap inside their own portfolio makes the expansion case. SafelyYou's expansion announcements show this is how growth already happens, and the report would make it repeatable.</p><p class="ie"><span class="ie-chip" aria-label="Impact: high">Impact <span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span> <b>High</b></span><span class="ie-chip" aria-label="Effort: medium">Effort <span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></span> <b>Medium</b></span></p><p class="from"><b>From my experience:</b> at HealthSnap I built reporting from scratch, including revenue by source and a lead-to-opportunity funnel. At <a href="case-studies/harness.html">Harness Giving</a>, feature launch programs raised customer operations satisfaction 11%.</p></div>
+        <div class="idea"><span class="num">3</span><h3>A quarterly Falls Index*</h3><p class="sy-note">An idea to explore</p><p>This would build on Falls: Behind the Numbers and the Cost of Senior Care report. De-identified data from more than 1,000 communities could become a regular benchmark by state and care type. Trade media covers data, sales would get a reason to reach out every quarter, and each edition would add content that organic search can find.</p><p class="ie"><span class="ie-chip" aria-label="Impact: medium">Impact <span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></span> <b>Medium</b></span><span class="ie-chip" aria-label="Effort: high">Effort <span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span> <b>High</b></span></p><p class="from"><b>From my experience:</b> at Bonum Health I ran PR and trade media, writing releases, pitching industry outlets, and managing publications like Drug Store News.</p></div>
+        <div class="idea"><span class="num">4</span><h3>Halo for new buildings</h3><p>Every new or renovated community needs an eCall system. Reaching developers and architects through the construction pipeline in trade press and industry data could get Halo specified before a building opens.</p><p class="ie"><span class="ie-chip" aria-label="Impact: high">Impact <span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span> <b>High</b></span><span class="ie-chip" aria-label="Effort: high">Effort <span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span> <b>High</b></span></p><p class="from"><b>From my experience:</b> at PrimaSun I led go-to-market for two consumer health apps from pre-launch through initial growth. At VendGogh I mapped a niche industry's trade press and associations to reach buyers where they already look.</p></div>
       </div>
-      <p class="sy-note" style="margin-top:16px;font-size:0.92rem"><b>Also worth exploring:</b> a family opt-in kit for communities, co-marketing with partners like Yardi and NOTIFY, and LinkedIn Thought Leader Ads from customer executives.</p>
+      <details class="more-ideas">
+        <summary>More ideas I'd pitch <span>2</span></summary>
+        <div class="more-grid">
+          <div><b>Funding partners at scale</b><p>Church Mutual subsidizes SafelyYou, Omega funds it for its operators, and SCAN invested. A formal program could bring in more liability insurers, REITs, and Medicare Advantage plans, lowering what operators pay to start.</p><p class="ie"><span class="ie-chip" aria-label="Impact: high">Impact <span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span> <b>High</b></span><span class="ie-chip" aria-label="Effort: high">Effort <span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span> <b>High</b></span></p><p class="more-from"><b>From my experience:</b> at Bonum Health, I marketed our telemedicine platform to insurance plan buyers as a B2B value-add.</p></div>
+          <div><b>A hospital referral advantage</b><p>Fewer ER send-outs is a selling point for hospitals choosing where to discharge patients. A co-branded safety scorecard would help customers win more referrals, which fills rooms and grows NOI.</p><p class="ie"><span class="ie-chip" aria-label="Impact: medium">Impact <span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></span> <b>Medium</b></span><span class="ie-chip" aria-label="Effort: medium">Effort <span class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></span> <b>Medium</b></span></p><p class="more-from"><b>From my experience:</b> at HealthSnap, I marketed to health system leaders, including Heads of Population Health and Revenue Cycle.</p></div>
+        </div>
+      </details>
     </section>
 
   </div>
