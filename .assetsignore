@@ -1,0 +1,8 @@
+.git
+.gitignore
+.assetsignore
+.wrangler
+.dev.vars*
+.env*
+wrangler.jsonc
+node_modules
